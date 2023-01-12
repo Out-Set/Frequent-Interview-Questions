@@ -12,7 +12,7 @@ public class SubarrayWithGivenSum {
     static int subarrayWithGivenSum(int a[], int givenSum){
 
         for(int i=0; i<a.length; i++){
-            int sum = 0;
+            int sum = a[i];
 
             for(int j=i+1; j<a.length; j++){
                 sum = sum + a[j];
