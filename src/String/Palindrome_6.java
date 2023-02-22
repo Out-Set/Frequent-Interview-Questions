@@ -3,8 +3,9 @@ package String;
 public class Palindrome_6 {
     public static void main(String[] args) {
         
-        System.out.println(new Palindrome_6().isPalNum(121));
+        // System.out.println(new Palindrome_6().isPalNum(121));
         System.out.println(new Palindrome_6().isPalStr("ababa"));
+        System.out.println(new Palindrome_6().isPalStr("sawan"));
     }
 
     boolean isPalNum(int n){
@@ -25,15 +26,15 @@ public class Palindrome_6 {
     boolean isPalStr(String s){
 
         String rev = "";
-        for(int i=0; i<s.length(); i++){
+        for(int i=s.length()-1; i>=0; i--){
             rev = rev + s.charAt(i);
         }
         
         for(int i=0; i<s.length(); i++){
-            if(rev.charAt(i) == s.charAt(i)){
-                return true;
+            if(rev.charAt(i) != s.charAt(i)){
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
